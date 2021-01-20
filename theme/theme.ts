@@ -30,7 +30,8 @@ export const GlobalStyles = createGlobalStyle`
         min-height: 100%;
         font-size: 62.5%;
     }
-    ::selection, ::-moz-selection, ::-webkit-selection {
+
+    ::selection {
         background: #333;
         color: #fff;
         text-shadow: none;
@@ -95,4 +96,20 @@ export const GlobalStyles = createGlobalStyle`
         position: relative;
         z-index: 2;
     }
+
+    .clear {
+        *zoom: 1;
+
+        &:before {
+            content: ' ';
+            display: table;
+        }
+
+        &:after {
+            content: ' ';
+            display: table;
+            clear: both;
+        }
+    }
+
 `

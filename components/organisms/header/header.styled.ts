@@ -61,13 +61,13 @@ export const StyledTitleSimple = styled(StyledTitle)`
   text-transform: none;
   z-index: 2;
   position: relative;
-  max-width: 530px;
+  max-width: 53rem;
 `
 
 export const StyledTitleSpan = styled.span`
   font-size: 3rem;
   text-transform: none;
-  font-family: $headerFontFamilyReg;
+  font-family: ${({ theme }) => theme.font.family.headerReg};
   opacity: 0.5;
   display: block;
   @media only screen and (max-width: 630px) {
@@ -75,9 +75,9 @@ export const StyledTitleSpan = styled.span`
   }
 `
 
-export const StyledSubTitle = styled.h2`
-  font-family: $baseFontFamily;
-  color: $lightText;
+export const StyledDescription = styled.h2`
+  font-family: ${({ theme }) => theme.font.family.base};
+  color: ${({ theme }) => theme.colors.lightText};
   font-weight: 400;
   font-size: 1.8rem;
   max-width: 57rem;
@@ -89,25 +89,25 @@ export const StyledSubTitle = styled.h2`
 `
 
 export const StyledCTA = styled.a`
-  font-family: $headerFontFamilyReg;
+  font-family: ${({ theme }) => theme.font.family.headerReg};
   font-size: 2rem;
   text-transform: uppercase;
   margin-left: 4rem;
   @media only screen and (max-width: ${({ theme }) => theme.screen.small}) {
     display: block;
-    margin: 20px 0 0 0;
+    margin: 2rem 0 0 0;
     text-align: center;
   }
 `
 
 export const StyledGraphic = styled.div`
-  width: 775px;
+  width: 77.5rem;
   position: absolute;
-  top: -5px;
+  top: 0.5rem;
   right: -10rem;
 
   @media only screen and (max-width: ${({ theme }) => theme.screen.xlarge}) {
-    right: -300px;
+    right: -30rem;
   }
   @media only screen and (max-width: ${({ theme }) => theme.screen.large}) {
     display: none;
@@ -116,9 +116,9 @@ export const StyledGraphic = styled.div`
 
 export const StyledSimpleGraphic = styled(StyledGraphic)`
   width: auto;
-  left: -70px;
+  left: -7rem;
   right: auto;
-  top: 70px;
+  top: 7rem;
   z-index: 1;
 
   @media only screen and (max-width: ${({ theme }) => theme.screen.large}) {
@@ -129,7 +129,7 @@ export const StyledSimpleGraphic = styled(StyledGraphic)`
   }
 `
 
-export const StyledImage = styled(Image)`
+export const StyledImage = styled.img`
   width: auto;
   position: absolute;
   top: 13%;

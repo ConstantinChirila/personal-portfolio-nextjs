@@ -8,7 +8,7 @@ import {
   StyledTitle,
   StyledTitleSimple,
   StyledTitleSpan,
-  StyledSubTitle,
+  StyledDescription,
   StyledCTA,
   StyledGraphic,
   StyledSimpleGraphic,
@@ -17,18 +17,12 @@ import {
 } from './header.styled'
 
 import { config } from '@portfolio/data'
-import { Menu } from '@portfolio/components'
+import { Menu, Button } from '@portfolio/components'
+import { homepageData } from '@portfolio/data'
 
 export function Header({ type, title }: TProps): ReactElement {
   const [showForm, setShowForm] = useState(false)
-
-  const openModal = () => {
-    setShowForm(true)
-  }
-
-  const closeModal = () => {
-    setShowForm(false)
-  }
+  const { header } = homepageData
 
   switch (type) {
     case 'simple':
@@ -41,7 +35,6 @@ export function Header({ type, title }: TProps): ReactElement {
               <StyledImageSimple
                 src="/images/simple-header-bg.svg"
                 alt="Laptop Ilustration"
-                layout="fill"
               />
             </StyledSimpleGraphic>
           </StyledContainerSimple>
@@ -58,25 +51,21 @@ export function Header({ type, title }: TProps): ReactElement {
               <br /> Web Developer <br />
               and UX/UI Designer
             </StyledTitle>
-            <StyledSubTitle>{'headerData.description'}</StyledSubTitle>
-            <button
-              type="button"
-              onClick={() => openModal()}
-              className="button"
-            >
-              {`headerData.button.name`}
-            </button>
+            <StyledDescription>{header.description}</StyledDescription>
+            <Button typeof="button" onClick={() => setShowForm(true)}>
+              {header.button.name}
+            </Button>
             <StyledCTA
               href={`mailto:${config.contactEmail}?subject=I have a question!`}
             >
-              {'headerData.link.name'}
+              {header.link.name}
             </StyledCTA>
             <StyledGraphic>
               <StyledImage
                 src="/images/laptop-graphic.png"
                 alt="Front End Developer Graphic"
-                layout="fill"
               />
+
               <svg width="775" height="704" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient
@@ -104,12 +93,13 @@ export function Header({ type, title }: TProps): ReactElement {
               </svg>
             </StyledGraphic>
           </StyledContainer>
-          {/* {showForm ? (
+          {/* {showForm && (
             <Portal>
-              <Modal title="Say hello!" handleClose={closeModal} />
+              <Modal
+                title="Say hello!"
+                handleClose={() => setShowForm(false)}
+              />
             </Portal>
-          ) : (
-            ''
           )} */}
         </StyledHeader>
       )

@@ -1,4 +1,4 @@
-import React from 'react'
+import { Fragment } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -19,7 +19,9 @@ export function Menu() {
     <StyledMenu>
       <StyledLogo>
         <Link href="/">
-          <Icons type="logo" />
+          <Fragment>
+            <Icons type="logo" />
+          </Fragment>
         </Link>
       </StyledLogo>
       <StyledListContainer>
@@ -48,6 +50,7 @@ export function Menu() {
           </Link>
         </StyledList>
       </StyledListContainer>
+      <div className="clear"></div>
     </StyledMenu>
   )
 }
