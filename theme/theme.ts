@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
     @font-face {
         font-family: 'Brandon';
         src: url("./../styles/fonts/brandon.woff") format("woff")
