@@ -1,3 +1,3 @@
 export type TProps = {
-  type: 'back-arrow'
+  type: 'back-arrow' | 'logo'
 }
