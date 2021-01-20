@@ -1,15 +1,16 @@
+import { ReactElement } from "react";
 import Head from "next/head";
 
-export default function Home() {
+export default function Home(): ReactElement {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>Hello!</h1>
+      <main>
+        <h1>Hello!</h1>
       </main>
     </div>
   );
