@@ -1,17 +1,7 @@
-import { ReactElement } from "react";
-import Head from "next/head";
+import { ReactElement } from 'react'
 
-export default function Home(): ReactElement {
-  return (
-    <div>
-      <Head>
-        <title>App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+import { Home } from '@portfolio/components'
 
-      <main>
-        <h1>Hello!</h1>
-      </main>
-    </div>
-  );
+export default function HomePage(): ReactElement {
+  return <Home />
 }

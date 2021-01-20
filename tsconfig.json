@@ -11,7 +11,9 @@
     "moduleResolution": "node",
     "noEmit": true,
     "paths": {
-      "@portfolio/theme": ["theme/index.ts"]
+      "@portfolio/theme": ["theme/index.ts"],
+      "@portfolio/components": ["components/index.ts"],
+      "@portfolio/data": ["data"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,

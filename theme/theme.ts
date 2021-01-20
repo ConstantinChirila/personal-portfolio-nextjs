@@ -3,17 +3,17 @@ import { createGlobalStyle } from 'styled-components'
 export const GlobalStyles = createGlobalStyle`
     @font-face {
         font-family: 'Brandon';
-        src: url("./../styles/fonts/brandon.woff") format("woff")
+        src: url("/fonts/brandon.woff") format("woff")
     }
 
     @font-face {
         font-family: 'Brandon Med';
-        src: url("./../styles/fonts/brandon-med.woff") format("woff")
+        src: url("/fonts/brandon-med.woff") format("woff")
     }
 
     @font-face {
         font-family: 'Brandon Bold';
-        src: url("./../styles/fonts/brandon-bold.woff") format("woff")
+        src: url("/fonts/brandon-bold.woff") format("woff")
     }
 
     *, *::before, *::after {
