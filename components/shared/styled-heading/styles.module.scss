@@ -1,0 +1,29 @@
+.heading {
+  h1,
+  h2 {
+    background: linear-gradient(
+      90deg,
+      var(--color-primary) 15%,
+      var(--color-secondary-light) 65%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 6rem;
+    &::selection {
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: #fff;
+      background-clip: text;
+      text-fill-color: #fff;
+    }
+  }
+  h2 {
+    font-size: 4rem;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+}

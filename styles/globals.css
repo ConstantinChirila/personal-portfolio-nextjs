@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+
+@font-face {
+  font-family: "Brandon";
+  src: url("/fonts/brandon.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Brandon Med";
+  src: url("/fonts/brandon-med.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Brandon Bold";
+  src: url("/fonts/brandon-bold.woff") format("woff");
+}
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    @apply m-0 p-0 box-border;
+  }
+  html {
+    @apply min-h-[100%] relative;
+  }
+
+  body {
+    @apply bg-coloredDark text-bright font-sans text-lg leading-relaxed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-bold font-titleBold;
+  }
+  h1 {
+    @apply text-[2.5rem] font-bold font-titleBold;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+  h3 {
+    @apply text-3xl;
+  }
+  h4 {
+    @apply text-2xl;
+  }
+  h5 {
+    @apply text-xl;
+  }
+  a {
+    @apply text-primary 
+    cursor-pointer
+    underline
+    hover:no-underline;
+  }
+
+  ::selection {
+    @apply bg-primary text-white shadow-none;
+  }
+  a::selection {
+    @apply underline;
+  }
+
+  .custom-link {
+    @apply relative
+    no-underline
+    after:content-[""] 
+    after:absolute 
+    after:bottom-[-2px] 
+    after:left-0 
+    after:w-full 
+    after:h-0.5
+    after:bg-primary 
+    after:transition-all 
+    after:duration-300
+    hover:after:w-0;
+  }
+}
