@@ -41,7 +41,7 @@ export function Header() {
           />
           <Image
             src="/static/person.png"
-            alt="Contantin Chirile hovering"
+            alt="Contantin Chirila hovering"
             width={350}
             height={410}
             className={styles.person}

@@ -3,21 +3,50 @@
   .alignedContent {
     max-width: 138rem;
     margin: 0 auto;
-    padding: 15rem 4rem 12rem 4rem;
+    padding: 13rem 4rem 12rem 4rem;
     display: grid;
     position: relative;
+    @media screen and (max-width: 768px) {
+      padding: 10rem 4rem 10rem 4rem;
+    }
+    @media screen and (max-width: 500px) {
+      padding: 5rem 4rem 8rem 4rem;
+    }
   }
   .content {
     max-width: 68rem;
+    position: relative;
+    z-index: 20;
+    &:after {
+      content: "";
+      width: 50%;
+      height: 100%;
+      background: var(--color-dark);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    h1 {
+      -webkit-filter: drop-shadow(0 0.4rem 0.3rem rgba(0, 0, 0, 0.7));
+      filter: drop-shadow(0 0.4rem 0.3rem rgba(0, 0, 0, 0.7));
+      @media screen and (max-width: 500px) {
+        font-size: 5rem;
+      }
+    }
     p {
       font-size: 1.8rem;
       max-width: 56rem;
       span {
         color: var(--color-primary);
       }
+      @media screen and (max-width: 768px) {
+        max-width: 50rem;
+      }
     }
     .ctaBar {
       display: flex;
+      flex-wrap: wrap;
       justify-content: flex-start;
       align-items: center;
       grid-gap: 4rem;
@@ -31,6 +60,10 @@
     top: 0;
     left: 50%;
     width: 85rem;
+    z-index: 1;
+    @media screen and (max-width: 400px) {
+      top: 5rem;
+    }
     img {
       width: 100%;
       object-fit: none;
@@ -43,6 +76,12 @@
       animation-name: personAnimation;
       animation-duration: 20s;
       animation-iteration-count: infinite;
+      @media screen and (max-width: 900px) {
+        left: -10%;
+      }
+      @media screen and (max-width: 400px) {
+        display: none;
+      }
     }
     .dots {
       position: absolute;
