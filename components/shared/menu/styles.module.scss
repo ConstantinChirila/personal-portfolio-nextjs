@@ -11,9 +11,9 @@
 
 .container {
   width: 100%;
-  max-width: 140rem;
+  max-width: 130rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,7 +39,7 @@
 }
 
 .logo {
-  max-width: 30rem;
+  max-width: 28rem;
   line-height: 0;
   .desktopLogo {
     display: block;

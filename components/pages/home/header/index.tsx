@@ -1,13 +1,11 @@
-import { Button } from "@shared-components";
-import { StyledHeading } from "components/shared/styled-heading";
+import { Button, StyledHeading } from "@shared-components";
 import Link from "next/link";
-import styles from "./styles.module.scss";
+import React from "react";
 
-export default function Home() {
+export function Header() {
   return (
     <div>
       {" "}
-      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{" "}
       <StyledHeading>
         <h1>
           Front end <br /> engineer with <br /> UX & DEsign expertise

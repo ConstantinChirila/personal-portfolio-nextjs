@@ -10,7 +10,7 @@ export function Menu() {
         <div className={styles.logo}>
           <Image
             src="/static/logo.svg"
-            alt="This is a logo"
+            alt="Constantin Chirila logo"
             width={300}
             height={39}
             // className={styles.desktopLogo}
@@ -29,7 +29,7 @@ export function Menu() {
               <Link href="/experience">Experience</Link>
             </li>
             <li>
-              <Link href="/about">About me</Link>
+              <Link href="/about">About</Link>
             </li>
             <li>
               <Link href="/blog">Blog</Link>
