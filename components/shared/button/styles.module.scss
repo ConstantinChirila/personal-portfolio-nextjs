@@ -11,7 +11,7 @@
   font-size: 1.6rem;
   color: #fff;
   font-weight: 600;
-  padding: 1.2rem 3.5rem;
+  padding: 1rem 3rem;
   position: relative;
   z-index: 1;
   cursor: pointer;
@@ -40,7 +40,8 @@
 
   &:hover {
     transform: scale(1.04);
-    box-shadow: 0px 2px 20px rgba(var(--color-secondary-rgb), 0.5);
+    box-shadow: 0px 2px 20px rgba(var(--color-secondary-rgb), 0.7);
+
     &::before {
       opacity: 1;
     }

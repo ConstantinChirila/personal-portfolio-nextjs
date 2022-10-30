@@ -1,0 +1,91 @@
+.wrapper {
+  overflow: hidden;
+  .alignedContent {
+    max-width: 138rem;
+    margin: 0 auto;
+    padding: 15rem 4rem 12rem 4rem;
+    display: grid;
+    position: relative;
+  }
+  .content {
+    max-width: 68rem;
+    p {
+      font-size: 1.8rem;
+      max-width: 56rem;
+      span {
+        color: var(--color-primary);
+      }
+    }
+    .ctaBar {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      grid-gap: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      margin-top: 3rem;
+    }
+  }
+  .featureImage {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 85rem;
+    img {
+      width: 100%;
+      object-fit: none;
+    }
+    .person {
+      position: absolute;
+      top: 30%;
+      left: 3%;
+      z-index: 10;
+      animation-name: personAnimation;
+      animation-duration: 20s;
+      animation-iteration-count: infinite;
+    }
+    .dots {
+      position: absolute;
+      top: -4%;
+      left: -5%;
+      z-index: 1;
+      animation-name: dotsAnimation;
+      animation-duration: 30s;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+@keyframes personAnimation {
+  0% {
+    transform: translate(0, 0);
+  }
+  //   25% {
+  //     left: 1%;
+  //   }
+  50% {
+    transform: translate(-5%, -12%);
+  }
+  //   75% {
+  //     left: 4%;
+  //   }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes dotsAnimation {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-10%, -6%);
+  }
+  50% {
+    transform: translate(-5%, -6%);
+  }
+  75% {
+    transform: translate(-3%, -5%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
