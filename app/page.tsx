@@ -1,7 +1,6 @@
 import { Button } from "@shared-components";
 import { StyledHeading } from "components/shared/styled-heading";
 import Link from "next/link";
-import styles from "./styles.module.scss";
 
 export default function Home() {
   return (

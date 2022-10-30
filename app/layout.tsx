@@ -1,7 +1,5 @@
-import { Footer, SEO } from "components/shared";
-
+import { Menu, Footer, SEO } from "components/shared";
 import "../styles/global.scss";
-import { Menu } from "components/shared";
 
 export default function RootLayout({
   children,

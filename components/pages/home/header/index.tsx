@@ -1,6 +1,5 @@
 import { Button, StyledHeading } from "@shared-components";
 import Link from "next/link";
-import React from "react";
 
 export function Header() {
   return (

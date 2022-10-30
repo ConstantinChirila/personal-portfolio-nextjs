@@ -17,8 +17,8 @@ export function Footer() {
           </div>
           <h2>{`Let's`} collaborate on your next project</h2>
           <p>
-            I am always open to discussing product design work or partnership
-            opportunities.
+            I am open to discussing product engineering / design work or
+            partnership opportunities.
           </p>
           <Button>{`Let's`} do this</Button>
           <div className={styles.divider}></div>
