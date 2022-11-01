@@ -1,0 +1,11 @@
+.wrapper {
+  max-width: 138rem;
+  margin: 0 auto;
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 20fr 21fr;
+  grid-gap: 6rem;
+  p {
+    background-color: var(--color-dark);
+  }
+}
